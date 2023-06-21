@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keeper App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header><h1>Keeper App</h1></header>
+    <div class="noteWriteArea">
+      <form>
+        <input
+          spellcheck="false"
+          type="text"
+          placeholder="Note Title"
+          id="noteTitle"
+          class="noteTitle"
+        />
+        <textarea
+          spellcheck="false"
+          name="noteArea"
+          id="noteArea"
+          cols="30"
+          rows="3"
+          class="noteArea"
+          placeholder="Note"
+        ></textarea>
+        <button class="addButton" id="addButton">Add</button>
+      </form>
+    </div>
+    <div class="noteContainer" id="notes"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

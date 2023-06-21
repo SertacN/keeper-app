@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  font-weight: 400;
+  background-color: orange;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.noteWriteArea {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  position: relative;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.noteTitle {
+  font-weight: 500;
+  outline: none;
+  border: none;
+  font-size: 1.3rem;
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+}
+
+.noteArea {
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  resize: none;
+  width: 100%;
+  margin-top: 35px;
+  padding: 10px;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.noteArea::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.noteArea {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+button {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50%;
+  background: orange;
+  color: white;
+  position: absolute;
+  right: 8px;
+  bottom: -20px;
+  transition: 0.3s;
+}
+
+.notes {
+  margin: 10px;
+  position: relative;
+  display: inline-block;
+  min-width: 300px;
+  min-height: 100px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+h3 {
+  padding: 10px;
+}
+p {
+  padding: 10px;
+}
+button:hover {
+  background-color: darkorange;
+}
+.deleteButton {
+  border-radius: 20px;
+}
+.noteContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
