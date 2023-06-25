@@ -96,3 +96,9 @@ button:hover {
   align-items: flex-start;
   flex-wrap: wrap;
 }
+.time {
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  background: orange;
+}

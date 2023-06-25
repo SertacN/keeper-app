@@ -12,6 +12,7 @@ function addNote(e) {
   const titleHandler = noteTitle.value;
   const areaHandler = noteArea.value;
   const noteID = Date.now();
+  const whenAdded = new Date().toLocaleDateString();
   const deleteButton = `<button class="deleteButton" id="deleteButton-${noteID}">Delete</button>`;
 
   const lines = areaHandler.split("\n");
@@ -22,6 +23,7 @@ function addNote(e) {
 
   const noteHTML = `
     <div class="notes" data-noteid="${noteID}">
+      <p class="time">Adding Date: ${whenAdded} </p>
       <h3>${titleHandler}</h3>
       ${notesHTMLTemplate.join("")} 
       ${deleteButton}
@@ -33,7 +35,7 @@ function addNote(e) {
   const deleteButtonElement = document.getElementById(`deleteButton-${noteID}`);
   deleteButtonElement.addEventListener("click", deleteNote);
 
-  saveNoteToLocalStorage(noteID, titleHandler, areaHandler);
+  saveNoteToLocalStorage(whenAdded, noteID, titleHandler, areaHandler);
 
   noteTitle.value = "";
   noteArea.value = "";
@@ -47,7 +49,7 @@ function deleteNote() {
   deleteNoteFromLocalStorage(noteID);
 }
 
-function saveNoteToLocalStorage(noteID, title, content) {
+function saveNoteToLocalStorage(time, noteID, title, content) {
   let notes = localStorage.getItem("notes");
 
   if (notes === null) {
@@ -57,6 +59,7 @@ function saveNoteToLocalStorage(noteID, title, content) {
   }
 
   const note = {
+    times: time,
     id: noteID,
     title: title,
     content: content,
@@ -92,7 +95,7 @@ function loadNotes() {
 
   notes.forEach((note) => {
     const deleteButton = `<button class="deleteButton" id="deleteButton-${note.id}">Delete</button>`;
-
+    const whenTime = note.times;
     const lines = note.content.split("\n");
 
     const notesHTMLTemplate = lines.map((line) => {
@@ -101,6 +104,7 @@ function loadNotes() {
 
     const noteHTML = `
       <div class="notes" data-noteid="${note.id}">
+        <p class="time">Adding Date: ${whenTime}</p>
         <h3>${note.title}</h3>
         ${notesHTMLTemplate.join("")} 
         ${deleteButton}
