@@ -1,7 +1,7 @@
 <h1>Keeper App with Javascript</h2>
-
+<h3>Live Server: https://sertacn.github.io/keeper-app/</h3>
 <h3>What is the Keeper App:</h3>
-
+<p>Google Keep Clone. I tried to replicate the Google Keep application exactly.</p>
 <p>You can write notes with the Keeper app and even if you close your browser, you can later come back and check them again. You can add and delete notes.</p>
 
 <h3>Functions:</h3>
